@@ -56,8 +56,10 @@ exports.login = async (req, res) => {
       return res.status(500).json({ message: "incorrect email or password" });
     }
 
-    const token = jwt.sign({ userId: userExists._id }, "rca_ne_prep", {
-      expiresIn: "3h",
+    const jwt_secret = process.env.JWT_KEY;
+
+    const token = jwt.sign({ userId: userExists._id }, jwt_secret, {
+      expiresIn: "12h",
     });
 
     return res.status(200).json({ token });

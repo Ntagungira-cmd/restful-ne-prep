@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require("dotenv")
 const { Swaggiffy } = require("swaggiffy");
 const connectDB = require("./utils/dbconnection");
 const routes = require("./routes");
@@ -6,6 +7,9 @@ const cors = require("cors");
 
 const app = express();
 const port = 3000;
+
+//configure dotenv
+dotenv.config();
 
 //parse requests
 app.use(express.json());
