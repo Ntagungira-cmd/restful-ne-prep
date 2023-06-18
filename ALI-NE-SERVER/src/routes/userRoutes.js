@@ -27,6 +27,10 @@ router.post(
   userController.uploadProfilePicture
 );
 
-registerDefinition(router,{tags:"User", mappedSchema:"User", basePath:"/users"});
+registerDefinition(router, {
+  tags: "User",
+  mappedSchema: "User",
+  basePath: "/api/v1/users",
+});
 
 module.exports = router;

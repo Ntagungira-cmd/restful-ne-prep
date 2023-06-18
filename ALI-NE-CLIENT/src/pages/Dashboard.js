@@ -27,7 +27,7 @@ function Dashboard() {
   return (
     <div className="dash-container">
       <SideBar />
-      <div className="w-[85%]">
+      <div className="content">
         <Table data={data} />
       </div>
     </div>

@@ -29,7 +29,7 @@
       }
     },
     "paths": {
-      "/users/add": {
+      "/api/v1/users/add": {
         "post": {
           "tags": [
             "User"
@@ -72,7 +72,7 @@
           ]
         }
       },
-      "/users/auth": {
+      "/api/v1/users/auth": {
         "post": {
           "tags": [
             "User"
@@ -115,7 +115,7 @@
           ]
         }
       },
-      "/users/update/{_id}": {
+      "/api/v1/users/update/{_id}": {
         "put": {
           "tags": [
             "User"
@@ -164,7 +164,7 @@
           ]
         }
       },
-      "/users/profile/{_id}": {
+      "/api/v1/users/profile/{_id}": {
         "get": {
           "tags": [
             "User"
@@ -217,7 +217,7 @@
           ]
         }
       },
-      "/users/upload/{_id}": {
+      "/api/v1/users/upload/{_id}": {
         "post": {
           "tags": [
             "User"
@@ -266,7 +266,7 @@
           ]
         }
       },
-      "/restaurants/add": {
+      "/api/v1/restaurants/add": {
         "post": {
           "tags": [
             "Restaurant"
@@ -309,7 +309,7 @@
           ]
         }
       },
-      "/restaurants/all": {
+      "/api/v1/restaurants/all": {
         "get": {
           "tags": [
             "Restaurant"
@@ -355,7 +355,7 @@
           ]
         }
       },
-      "/restaurants/update/{id}": {
+      "/api/v1/restaurants/update/{id}": {
         "get": {
           "tags": [
             "Restaurant"
@@ -455,7 +455,7 @@
           ]
         }
       },
-      "/restaurants/delete/{id}": {
+      "/api/v1/restaurants/delete/{id}": {
         "delete": {
           "tags": [
             "Restaurant"
@@ -529,7 +529,7 @@
           },
           "createdAt": {
             "type": "string",
-            "example": "6/18/2023, 7:10:43 PM"
+            "example": "6/18/2023, 9:45:56 PM"
           },
           "_id": {
             "type": "object"

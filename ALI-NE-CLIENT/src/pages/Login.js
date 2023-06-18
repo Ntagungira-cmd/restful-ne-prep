@@ -85,15 +85,15 @@ function Login() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col md:flex-row h-screen">
       <ToastContainer />
-      <div className="w-1/2 bg-blue-500 flex flex-col justify-center items-center">
-        <h1 className="text-white text-6xl font-bold mb-8">
+      <div className="w-full md:w-1/2 bg-blue-500 flex flex-col justify-center items-center">
+        <h1 className="text-white text-4xl md:text-6xl font-bold md:font-semibold mb-8">
           App<span className="text-blue-300">Title</span>
         </h1>
       </div>
-      <div className="w-1/2 bg-white flex flex-col justify-center items-center">
-        <div className="w-2/3">
+      <div className="w-full md:w-1/2 bg-white flex flex-col justify-center items-center">
+        <div className="md:w-2/3">
           <div className="mb-6 mx-auto text-center">
             <h3 className="text-2xl font-bold ">login</h3>
             <p className="text-gray-500 text-sm">

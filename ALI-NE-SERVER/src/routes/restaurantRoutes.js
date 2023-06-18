@@ -35,7 +35,7 @@ router.delete(
 registerDefinition(router, {
   tags: "Restaurant",
   mappedSchema: "Restaurant",
-  basePath: "/restaurants",
+  basePath: "/api/v1/restaurants",
 });
 
 module.exports = router;

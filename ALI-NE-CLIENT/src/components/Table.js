@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import API_URL from "../api/api";
-import { Link } from "react-router-dom";
-import { FaCross } from "react-icons/fa";
+import { FiDelete} from "react-icons/fi";
 
 const Table = ({ data }) => {
   const [formData, setFormData] = useState({
@@ -70,16 +69,23 @@ const Table = ({ data }) => {
       console.log(e);
     }
   };
+
   return (
-    <div>
+    <div className="table-container">
       {data.length > 0 ? (
-        <div>
+        <div className="overflow-x-auto">
           <table className="table-auto w-[90%] m-5 bg-white shadow-md mx-auto rounded-lg">
+            <colgroup>
+              <col className="w-1/3" />
+              <col className="w-1/3" />
+              <col className="w-1/3" />
+            </colgroup>
             <thead>
               <tr>
                 <th className="py-2 bg-blue-500 text-white">Name</th>
                 <th className="py-2 bg-blue-500 text-white">Address</th>
                 <th className="py-2 bg-blue-500 text-white">Owner</th>
+                <th className="py-2 bg-blue-500 text-white">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -92,6 +98,7 @@ const Table = ({ data }) => {
                   <td className="py-2 text-center">{row.name}</td>
                   <td className="py-2 text-center">{row.address}</td>
                   <td className="py-2 text-center">{row.type}</td>
+                  <td className="py-2 text-center text-red-500"><FiDelete className="m-5"/></td>
                 </tr>
               ))}
             </tbody>
@@ -127,7 +134,6 @@ const Table = ({ data }) => {
       ) : (
         <div>No Data</div>
       )}
-
       {selectedRestaurant && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="bg-white w-96 p-8 rounded-lg shadow-lg h-[50vh] overflow-y-scroll">
