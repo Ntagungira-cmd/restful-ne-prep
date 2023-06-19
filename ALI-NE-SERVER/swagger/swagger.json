@@ -529,7 +529,7 @@
           },
           "createdAt": {
             "type": "string",
-            "example": "6/19/2023, 12:45:44 AM"
+            "example": "6/19/2023, 7:19:12 AM"
           },
           "_id": {
             "type": "object"
